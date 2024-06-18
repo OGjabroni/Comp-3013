@@ -4,13 +4,9 @@ import React from 'react';
 import styles from "./assignments.module.css";
 
 type Props = {
-   
- 
     assignments: TAssignment[] | []
     setAssignments: React.Dispatch<React.SetStateAction<TAssignment[]>>;
 }
-
-
 
 export function Assignments({ assignments, setAssignments }: Props) {
   
@@ -27,7 +23,7 @@ export function Assignments({ assignments, setAssignments }: Props) {
   return (
     <div className={styles.assignments}>
       <div className={styles.header} >
-        Created assignments: ({assignments.length})
+        Created assignments: {assignments.length}
       </div>
       <div className={styles.header}>
         Completed assignments: {assignments.filter((assignment) => assignment.completed).length} of {assignments.length}
@@ -41,8 +37,7 @@ export function Assignments({ assignments, setAssignments }: Props) {
             assignment={assignment.task}
             completed={assignment.completed}
             onDelete={() => deleteAssignment(assignment.id)}
-            onToggle={() => toggleAssignment(assignment.id)} // pass the toggleAssignment function to the onToggle prop
-          />
+            onToggle={() => toggleAssignment(assignment.id)} assignments={[]}          />
         ))}
       </div>
     </div>

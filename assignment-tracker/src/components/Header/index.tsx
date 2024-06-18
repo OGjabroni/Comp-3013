@@ -22,7 +22,7 @@ export function Header({setAssignments}: Props) {
       setAssignments((assignments) => {
         return [
           ...assignments, 
-          { id: crypto.randomUUID(), task: assignment, completed: false }
+          { id: `${crypto.randomUUID()}`, title: assignment, task: assignment, completed: false }
         ]
       });
   
@@ -30,6 +30,7 @@ export function Header({setAssignments}: Props) {
       setAssignment(''); 
     }
   };
+
 
   return (
     <header className={`${styles.header} pb-5`}>
