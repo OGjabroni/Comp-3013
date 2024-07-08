@@ -21,7 +21,7 @@ function PostDetailsPage() {
           <Grid.Col span={4}>
             <Stack h={300} bg="var(--mantine-color-body)">
               <Container>
-                <Text size="xl" c="blue">
+                <Text size="xl" c="dark blue">
                   {postDetails.author}
                 </Text>
               </Container>

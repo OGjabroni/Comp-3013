@@ -28,18 +28,18 @@ export function EditPost() {
     <Box maw={300} mx="auto">
       <form onSubmit={form.onSubmit(handleSubmit)}>
         <TextInput label="Title" {...form.getInputProps('title')} />
-
         <TextInput label="Category" {...form.getInputProps('category')} />
         <TextInput label="Image" {...form.getInputProps('image')} />
-
         <Textarea
           label="Content"
-          maxRows={10}
+          maxRows={5}
           {...form.getInputProps('content')}
         />
 
         <Group position="right" mt="md">
-          <Button type="submit">Update</Button>
+          <Button type="submit">
+            Update!
+          </Button>
           <Button
             type="button"
             onClick={() => navigate(`/posts/${postDetails.id}`)}
