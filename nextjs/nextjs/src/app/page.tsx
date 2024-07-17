@@ -5,7 +5,7 @@ import Link from "next/link";
 const deleteBlock = async (id: string) => {
   'use server';
 
-  await prisma.post.delete({
+  await prisma.block.delete({
     where: {
       id,
     },
